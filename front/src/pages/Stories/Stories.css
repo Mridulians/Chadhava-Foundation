@@ -1,0 +1,132 @@
+/* Overall Page Styling */
+.impact-stories {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff8e7;
+    color: #333;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Hero Banner Styling */
+  .hero-banner {
+    background: url('../../assets/Stories_bg_1.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .hero-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-banner h1 {
+    font-size: 64px;
+    color: #fff;
+    z-index: 1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Introduction Section Styling */
+  .video-intro {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .video-intro h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #b45f06;  /* Deep orange for contrast */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .video-intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* Video Gallery Styling */
+  .video-gallery {
+    display: grid;
+    grid-template-areas:
+      'video-1 video-2 video-3'
+      'video-4 video-5 video-3'
+      'video-4 video-6 video-7';
+    grid-gap: 15px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Video Item Common Styling */
+  .video-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .video-item iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Unique Sizing for Collage Layout */
+  .video-1 { grid-area: video-1; height: 300px; }
+  .video-2 { grid-area: video-2; }
+  .video-3 { grid-area: video-3; height: 500px; }
+  .video-4 { grid-area: video-4; }
+  .video-5 { grid-area: video-5; height: 200px; }
+  .video-6 { grid-area: video-6; height: 300px; }
+  .video-7 { grid-area: video-7; height: 300px; }
+  
+  /* Hover Effect */
+  .video-item:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-banner h1 {
+      font-size: 40px;
+    }
+  
+    .video-intro h2 {
+      font-size: 28px;
+    }
+  
+    .video-intro p {
+      font-size: 16px;
+    }
+  
+    .video-gallery {
+      grid-template-areas:
+        'video-1'
+        'video-2'
+        'video-3'
+        'video-4'
+        'video-5'
+        'video-6'
+        'video-7';
+    }
+  
+    .video-item {
+      height: 250px;
+    }
+  }
+  

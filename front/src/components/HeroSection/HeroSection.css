@@ -1,0 +1,109 @@
+/* Hero Section Container */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  /* Slider container for images */
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Background image styles for the slider */
+  .slider-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Overlay for text */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .overlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .overlay p {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    opacity: 0.8;
+  }
+  .overlay .donate-now {
+    /* font-size: 1.25rem; */
+    margin-top: 10px;
+    background-color: #003366;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    font-weight: 700;
+    /* opacity: 0.8; */
+  }
+  
+  /* Navigation Arrows */
+  .prev , .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s;
+  }
+  
+  .prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .prev {
+    left: 20px;
+  }
+  
+  .next {
+    right: 20px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .overlay h1 {
+      font-size: 2rem;
+    }
+  
+    .overlay p {
+      font-size: 1rem;
+    }
+  }
+  

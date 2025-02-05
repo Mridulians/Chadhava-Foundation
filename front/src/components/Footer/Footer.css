@@ -1,0 +1,80 @@
+.footer {
+    background: #f9f9f9;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 180px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .footer-section p,
+  .footer-section ul {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .footer-section ul li:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .payment {
+    text-align: center;
+  }
+  
+  .upi-logo {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .qr-code {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  
+  .highlight {
+    font-weight: bold;
+    color: #222;
+  }
+  
