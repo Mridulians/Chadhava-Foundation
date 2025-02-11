@@ -1,0 +1,68 @@
+/* Privacy Policy Page Styling */
+.privacy-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .privacy-header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #00bcd4;
+  }
+  
+  .privacy-header h1 {
+    color: #00796b;
+    font-size: 28px;
+  }
+  
+  .privacy-header p {
+    color: #777;
+    font-size: 14px;
+  }
+  
+  .privacy-content {
+    padding: 20px;
+  }
+  
+  .privacy-content section {
+    margin-bottom: 30px;
+  }
+  
+  .privacy-content h2 {
+    font-size: 22px;
+    color: #00796b;
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .privacy-content p,
+  .privacy-content ul {
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .privacy-content ul {
+    padding-left: 20px;
+  }
+  
+  .privacy-content ul li {
+    margin-bottom: 10px;
+  }
+  
+  .privacy-content a {
+    color: #00bcd4;
+    text-decoration: none;
+  }
+  
+  .privacy-content a:hover {
+    text-decoration: underline;
+  }
+  

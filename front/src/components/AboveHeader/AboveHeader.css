@@ -1,0 +1,44 @@
+.above-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f26522; /* Orange Background */
+    color: white;
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+  
+  .contact-info-new {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .contact-info-new span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .social-icons a:hover {
+    color: #ddd;
+  }
+  
+  /* Hide for screens smaller than 768px */
+  @media (max-width: 768px) {
+    .above-header {
+      display: none;
+    }
+  }
+  

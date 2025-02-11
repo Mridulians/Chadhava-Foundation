@@ -38,6 +38,12 @@
   .footer-section ul li {
     margin-bottom: 5px;
     cursor: pointer;
+    text-decoration: none;
+  }
+
+  .footer_links{
+    text-decoration: none;
+    color: #555;
   }
   
   .footer-section ul li:hover {

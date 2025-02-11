@@ -1,0 +1,74 @@
+/* Mission & Vision Page Styling */
+.mission-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .mission-header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #00bcd4;
+  }
+  
+  .mission-header h1 {
+    color: #00796b;
+    font-size: 28px;
+  }
+  
+  .mission-header p {
+    color: #777;
+    font-size: 16px;
+    font-style: italic;
+  }
+  
+  .mission-content {
+    padding: 20px;
+  }
+  
+  .mission-content section {
+    margin-bottom: 30px;
+  }
+  
+  .mission-content h2 {
+    font-size: 22px;
+    color: #00796b;
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .mission-content p,
+  .mission-content ul {
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .mission-content ul {
+    padding-left: 20px;
+  }
+  
+  .mission-content ul li {
+    margin-bottom: 10px;
+  }
+  
+  .mission-content blockquote {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d84315;
+    background: #fbe9e7;
+    padding: 10px;
+    border-left: 5px solid #d84315;
+    margin-top: 15px;
+  }
+  
+  .mission-content p strong {
+    color: #00796b;
+  }
+  
