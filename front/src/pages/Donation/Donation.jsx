@@ -7,7 +7,7 @@ const Donation = () => {
 
   const handlePayment = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/payment/donate", {
+      const response = await fetch("https://chadhava-foundation-1.onrender.com/api/payment/donate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
