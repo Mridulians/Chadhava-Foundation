@@ -1,10 +1,13 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../components/UserContext";
 
 const Login = () => {
   const navigate = useNavigate();
+
+  const { setUser } = useContext(UserContext);
 
   // State to manage form data
   const [formData, setFormData] = useState({
@@ -26,28 +29,36 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://chadhava-foundation-1.onrender.com/api/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
 
-      console.log(data.user)
+      console.log(data.user);
 
       if (response.ok) {
         alert("Login successful!");
 
         // Store user's email and name in localStorage
-        sessionStorage.setItem(
-          "user",
-          JSON.stringify({
-            email: data.user.email,
-          })
-        );
+        // sessionStorage.setItem(
+        //   "user",
+        //   JSON.stringify({
+        //     email: data.user.email,
+        //   })
+        // );
+
+        const userData = { email: data.user.email };
+
+        // **Update global state immediately**
+        setUser(userData);
 
         navigate("/"); // Redirect to dashboard or another page after login
       } else {

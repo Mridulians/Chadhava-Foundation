@@ -4,6 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 import authRoutes from './routes/auth.js';
+import paymentRoute from './routes/payment.js'
 
 dotenv.config();
 
@@ -21,6 +22,8 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // Routes
 app.use('/api/auth', authRoutes);
+
+app.use('/api/payment' , paymentRoute);
 
 // Start server
 const PORT = process.env.PORT || 5000;

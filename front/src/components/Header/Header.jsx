@@ -111,28 +111,30 @@
 // export default Header;
 
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useContext } from "react";
 import "./Header.css";
 import Logo from "../../assets/new_logo.png";
 import { FaBars, FaEnvelope, FaPhone, FaTimes } from "react-icons/fa"; // Import hamburger and close icons
+import { UserContext } from "../UserContext.jsx";
 
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const {user , setUser} = useContext(UserContext);
 
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false); // State for mobile menu
 
-  useEffect(() => {
-    const storedUser = JSON.parse(sessionStorage.getItem("user"));
-    if (storedUser) {
-      setUser(storedUser);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const storedUser = JSON.parse(sessionStorage.getItem("user"));
+  //   if (storedUser) {
+  //     setUser(storedUser);
+  //   }
+  // }, []);
 
   const handleLogout = () => {
-    sessionStorage.removeItem("user");
+    // sessionStorage.removeItem("user");
     setUser(null);
     navigate("/donor-login");
     setSidebarOpen(false); // Close sidebar after logout
@@ -183,6 +185,14 @@ const Header = () => {
           }`}
         >
           Contact
+        </Link>
+        <Link
+          to="/donation"
+          className={`nav-item ${
+            location.pathname === "/donation" ? "active" : ""
+          }`}
+        >
+          Donate Now
         </Link>
 
         {/* User Dropdown */}
@@ -252,6 +262,13 @@ const Header = () => {
           onClick={() => setSidebarOpen(false)}
         >
           Contact
+        </Link>
+        <Link
+          to="/donation"
+          className="mobile-nav-item"
+          onClick={() => setSidebarOpen(false)}
+        >
+          Donate Now
         </Link>
 
         <div className="contact-info-new-mobile-hamburger">

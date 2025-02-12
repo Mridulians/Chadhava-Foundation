@@ -4,6 +4,7 @@ import "./HeroSection.css"; // Import custom CSS
 import Banner1 from "../../assets/Banner1.jpg";
 import Banner2 from "../../assets/Banner2.jpg";
 import Banner3 from "../../assets/Banner3.jpg";
+import { useNavigate } from "react-router-dom";
 
 const banners = [
   {
@@ -28,6 +29,7 @@ const banners = [
 
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   // Autoplay logic (automatically change slide every 3 seconds)
   useEffect(() => {
@@ -62,7 +64,7 @@ const HeroSection = () => {
         <div className="overlay">
           <h1>{banners[currentIndex].title}</h1>
           <p>{banners[currentIndex].subtitle}</p>
-         <button className="donate-now">Donate Now</button>
+         <button className="donate-now" onClick={()=>navigate("/donation")}>Donate Now</button>
         </div>
       </div>
 

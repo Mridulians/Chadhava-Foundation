@@ -16,6 +16,7 @@ import TermsAndConditions from './pages/TermsAndConditions/TermsAndConditions';
 import MissionVision from './pages/MissionVision/MissionVision';
 import ScrollToTop from './components/ScrollToTop';
 import AboveHeader from './components/AboveHeader/AboveHeader';
+import Donation from './pages/Donation/Donation';
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
           <Route path="/termsandconditions" element={<TermsAndConditions />} />
           <Route path="/missionvision" element={<MissionVision />} />
+          <Route path="/donation" element={<Donation />} />
         </Routes>
         <Newsletter />
         <Footer />
